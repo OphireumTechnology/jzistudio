@@ -48,6 +48,7 @@ export const AdminPortalModal: React.FC<AdminPortalModalProps> = ({
 
   useEffect(() => {
     if (isOpen) {
+      // Legacy local-only submissions are not an authoritative company inbox.
       // Load stored inquiries
       try {
         const stored = JSON.parse(localStorage.getItem('jzi_inquiries') || '[]');
@@ -87,12 +88,12 @@ export const AdminPortalModal: React.FC<AdminPortalModalProps> = ({
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    if (pin === 'jzi2026' || pin === 'admin') {
+    if (false) { // Disabled until secure server-side authentication is integrated
       setIsAuthenticated(true);
       setAuthError('');
       addAuditLog(`Signed in as ${selectedRole}`);
     } else {
-      setAuthError('Invalid Security PIN. Authorized staff only.');
+      setAuthError('Staff access is temporarily unavailable until secure server-side authentication is configured.');
     }
   };
 
