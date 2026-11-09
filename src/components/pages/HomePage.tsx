@@ -24,7 +24,7 @@ export const HomePage: React.FC<HomePageProps> = ({
         {/* Background Image with Contrast Scrim */}
         <div className="absolute inset-0 z-0">
           <img
-            src="/src/assets/images/hero_modern_architecture_1794254051474.jpg"
+            src={`${import.meta.env.BASE_URL}assets/images/hero_modern_architecture_1794254051474.jpg`}
             alt="JZI Studio Modern Architecture"
             className="w-full h-full object-cover opacity-35 scale-105 animate-in fade-in zoom-in duration-1000"
             referrerPolicy="no-referrer"
@@ -75,7 +75,7 @@ export const HomePage: React.FC<HomePageProps> = ({
           <div className="pt-10 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto border-t border-white/10 text-left text-xs text-zinc-400">
             <div className="space-y-0.5">
               <span className="font-['Outfit'] text-xl sm:text-2xl font-bold text-white block">PCAB</span>
-              <span className="text-[11px] text-[#DFB86C]">Licensed Contractor</span>
+              <span className="text-[11px] text-[#DFB86C]">Credentials: verification pending</span>
             </div>
             <div className="space-y-0.5">
               <span className="font-['Outfit'] text-xl sm:text-2xl font-bold text-white block">Single-Source</span>
@@ -144,7 +144,7 @@ export const HomePage: React.FC<HomePageProps> = ({
           <div className="lg:col-span-6">
             <div className="relative rounded-lg overflow-hidden border border-zinc-200 shadow-xl bg-zinc-900 group">
               <img
-                src="/src/assets/images/project_residential_villa_1794254055730.jpg"
+                src={`${import.meta.env.BASE_URL}assets/images/project_residential_villa_1794254055730.jpg`}
                 alt="Contemporary Architecture by JZI"
                 className="w-full h-80 sm:h-96 object-cover transition-transform duration-500 group-hover:scale-102"
                 referrerPolicy="no-referrer"
@@ -242,7 +242,7 @@ export const HomePage: React.FC<HomePageProps> = ({
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <BlueprintSlider imageSrc="/src/assets/images/hero_modern_architecture_1794254051474.jpg" />
+          <BlueprintSlider imageSrc={`${import.meta.env.BASE_URL}assets/images/hero_modern_architecture_1794254051474.jpg`} />
         </div>
       </section>
 

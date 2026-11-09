@@ -45,7 +45,7 @@ export const EquipmentPage: React.FC<EquipmentPageProps> = ({ onOpenConsultation
             Heavy Equipment & Capabilities
           </h1>
           <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed">
-            High-capacity earthmoving machinery, heavy haulage trucks, mobile cranes, and transit concrete batching support mobilized for rapid site execution.
+            High-capacity earthmoving machinery, heavy haulage trucks, mobile cranes, and transit concrete batching support listed in the company profile; current availability requires confirmation.
           </p>
         </div>
       </section>
@@ -54,7 +54,7 @@ export const EquipmentPage: React.FC<EquipmentPageProps> = ({ onOpenConsultation
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative rounded-xl overflow-hidden border border-zinc-200 shadow-xl bg-zinc-900">
           <img
-            src="/src/assets/images/equipment_fleet_excavators_1794254055633.jpg"
+            src={`${import.meta.env.BASE_URL}assets/images/equipment_fleet_excavators_1794254055633.jpg`}
             alt="JZI Heavy Construction Equipment Fleet"
             className="w-full h-64 sm:h-80 md:h-[380px] object-cover"
             referrerPolicy="no-referrer"
@@ -62,7 +62,7 @@ export const EquipmentPage: React.FC<EquipmentPageProps> = ({ onOpenConsultation
           <div className="absolute inset-0 bg-gradient-to-t from-[#0B1933] via-[#0B1933]/40 to-transparent" />
           <div className="absolute bottom-6 left-6 right-6 text-white max-w-xl space-y-2">
             <span className="text-[10px] tracking-widest font-bold uppercase text-[#DFB86C] bg-[#0B1933]/80 px-2 py-0.5 rounded border border-[#C99A3D]/40 inline-block">
-              Operational Fleet Readiness
+              Equipment record verification pending
             </span>
             <h2 className="font-['Outfit'] text-xl sm:text-2xl font-bold text-white">
               Direct Machinery Support for Civil & Structural Projects

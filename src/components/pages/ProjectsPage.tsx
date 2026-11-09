@@ -41,13 +41,13 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({
             <OfficialLogo size={60} />
           </div>
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded border border-[#C99A3D]/40 bg-white/5 text-[11px] font-semibold text-[#DFB86C] uppercase tracking-widest">
-            <span>Verified Portfolio (PDF Pages 11–33)</span>
+            <span>Project Portfolio (PDF Pages 11–33)</span>
           </div>
           <h1 className="font-['Outfit'] text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white">
             Constructed Realities & Projects
           </h1>
           <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed">
-            Authentic documentation of luxury contemporary residences, premier restaurant commercial fit-outs, civil aviation runways, flood-control works, and utility-scale solar farms.
+            Project profile materials covering residences, premier restaurant commercial fit-outs, civil aviation runways, flood-control works, and utility-scale solar farms.
           </p>
         </div>
       </section>

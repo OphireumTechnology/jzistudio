@@ -31,23 +31,12 @@ export const AdminPortalModal: React.FC<AdminPortalModalProps> = ({
   const [editingProject, setEditingProject] = useState<ProjectItem | null>(null);
 
   // Audit Log State
-  const [auditLogs, setAuditLogs] = useState<Array<{ id: string; action: string; timestamp: string; user: string }>>([
-    {
-      id: 'log-1',
-      action: 'Staff authentication session established',
-      timestamp: new Date().toLocaleTimeString(),
-      user: 'Super Administrator'
-    },
-    {
-      id: 'log-2',
-      action: 'PCAB accreditation compliance verified active for 2026',
-      timestamp: '09:30 AM',
-      user: 'Compliance Officer'
-    }
-  ]);
+  const [auditLogs, setAuditLogs] = useState<Array<{ id: string; action: string; timestamp: string; user: string }>>([]);
+
 
   useEffect(() => {
     if (isOpen) {
+      // Legacy local-only submissions are not an authoritative company inbox.
       // Load stored inquiries
       try {
         const stored = JSON.parse(localStorage.getItem('jzi_inquiries') || '[]');
@@ -87,13 +76,7 @@ export const AdminPortalModal: React.FC<AdminPortalModalProps> = ({
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    if (pin === 'jzi2026' || pin === 'admin') {
-      setIsAuthenticated(true);
-      setAuthError('');
-      addAuditLog(`Signed in as ${selectedRole}`);
-    } else {
-      setAuthError('Invalid Security PIN. Authorized staff only.');
-    }
+    setAuthError('Staff access is unavailable until secure server-side authentication is configured.');
   };
 
   const addAuditLog = (action: string) => {

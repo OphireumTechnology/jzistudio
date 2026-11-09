@@ -21,7 +21,7 @@ export const CredentialsPage: React.FC = () => {
             Licenses, Permits & Credentials
           </h1>
           <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed">
-            Documented regulatory authority filings confirming lawful operation, PCAB general contracting classification, SEC corporate charter, and occupational safety approval in the Republic of the Philippines.
+            The company profile contains images of selected corporate permits and registrations. Current validity, category, and publication authorization remain subject to independent verification.
           </p>
         </div>
       </section>
@@ -33,10 +33,10 @@ export const CredentialsPage: React.FC = () => {
             Official Filings
           </span>
           <h2 className="font-['Outfit'] text-2xl sm:text-3xl font-bold text-[#0B1933]">
-            Verified Corporate Regulatory Documents
+            Corporate Documents — Verification Pending
           </h2>
           <p className="text-xs sm:text-sm text-zinc-600">
-            Click on any credential to inspect the verified filing parameters and regulatory scope note.
+            Credential descriptions are provisional. Do not rely on these records as evidence of current registration, licensing or accreditation until independently confirmed.
           </p>
         </div>
 
@@ -102,7 +102,7 @@ export const CredentialsPage: React.FC = () => {
             </h4>
           </div>
           <p className="text-xs text-zinc-300 leading-relaxed">
-            In accordance with Republic Act No. 4566 (Contractor's License Law) and SEC reporting mandates, full original certified true copies of all municipal licenses, PCAB accreditation boards, and tax clearances are available to bona fide project owners, bidding authorities, and lending institutions upon mutual non-disclosure execution.
+            In accordance with Republic Act No. 4566 (Contractor's License Law) and SEC reporting mandates, Copies and verification details may be requested directly from JZI. Publication and disclosure remain subject to company approval and independent validation.
           </p>
           <p className="text-[11px] text-zinc-400 italic">
             {CORPORATE_IDENTITY.professionalDisclaimer}

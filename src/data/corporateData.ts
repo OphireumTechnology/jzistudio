@@ -46,7 +46,7 @@ export interface CredentialItem {
   issuingAuthority: string;
   category: string;
   registrationNumberMasked: string;
-  verificationStatus: 'Verified & Active' | 'Renewed & In Good Standing';
+  verificationStatus: 'Pending Verification' | 'Verified & Active' | 'Renewed & In Good Standing';
   scopeNote: string;
 }
 
@@ -93,11 +93,11 @@ export const CORPORATE_IDENTITY = {
   professionalDisclaimer:
     "Professional services requiring licenses, registrations, or specific authorizations are provided by appropriately qualified and authorized practitioners.",
   contact: {
-    address: "Metro Manila & Regional Project Offices, Philippines",
-    phone: "+63 (02) 8876-JZI / +63 917 555 4321",
-    email: "inquiries@jziconstruction.com",
-    hours: "Monday – Saturday: 8:00 AM – 6:00 PM PHT",
-    emergencySupport: "24/7 Site Engineering Dispatch for Active Contracts"
+    address: "Unit 5k Seina Tower 1, Marikina, Philippines",
+    phone: "+63 977-829-2851 / +63 933-210-6739 / (02) 7341-7233",
+    email: "jziarchitectural@gmail.com",
+    hours: "Contact for office hours",
+    emergencySupport: "For project inquiries, use the official contact numbers."
   }
 };
 
@@ -229,7 +229,7 @@ export const AUTHENTIC_PROJECTS: ProjectItem[] = [
     role: "Architect of Record & General Contractor",
     status: "Completed",
     verifiedRelationship: "Direct Design & Build Contract",
-    imageUrl: "/src/assets/images/project_residential_villa_1794254055730.jpg",
+    imageUrl: `${import.meta.env.BASE_URL}assets/images/project_residential_villa_1794254055730.jpg`,
     highlights: [
       "Triple-height glass curtain wall with automated shading",
       "Cantilevered master terrace overlooking coastal hills",
@@ -251,8 +251,8 @@ export const AUTHENTIC_PROJECTS: ProjectItem[] = [
     constructionSystem: "Monolithic Shear Walls with Lightweight Concrete Partitions",
     role: "General Contractor & Engineering Supervision",
     status: "Completed",
-    verifiedRelationship: "Verified Project Profile Documentation (pp. 12-17)",
-    imageUrl: "/src/assets/images/project_residential_villa_1794254055730.jpg",
+    verifiedRelationship: "Project profile referenced; relationship unverified (pp. 12-17)",
+    imageUrl: `${import.meta.env.BASE_URL}assets/images/project_residential_villa_1794254055730.jpg`,
     highlights: [
       "Dual independent utility metering and acoustic party walls",
       "Private garden courtyards for each residential wing",
@@ -273,8 +273,8 @@ export const AUTHENTIC_PROJECTS: ProjectItem[] = [
     constructionSystem: "Commercial Fire-Rated Gypsum Partitions, Stainless Ducting, Custom Wood Coffer Ceilings",
     role: "General Fit-Out Contractor & MEP Coordinator",
     status: "Completed",
-    verifiedRelationship: "Documented Commercial Client Project (PDF Page 18-20)",
-    imageUrl: "/src/assets/images/project_commercial_kuya_j_1794254055188.jpg",
+    verifiedRelationship: "Commercial site pictured in profile; role unverified (PDF Page 18-20)",
+    imageUrl: `${import.meta.env.BASE_URL}assets/images/project_commercial_kuya_j_1794254055188.jpg`,
     highlights: [
       "Precision-milled acoustic wood ceiling lattice",
       "Heavy-duty commercial kitchen exhaust with wet-chemical fire suppression",
@@ -295,8 +295,8 @@ export const AUTHENTIC_PROJECTS: ProjectItem[] = [
     constructionSystem: "Commercial Steel Stud Framing, Terrazzo Flooring, Stainless Prep Stations",
     role: "General Fit-Out Contractor",
     status: "Completed",
-    verifiedRelationship: "Documented Commercial Client Project (PDF Page 21)",
-    imageUrl: "/src/assets/images/project_commercial_kuya_j_1794254055188.jpg",
+    verifiedRelationship: "Commercial site pictured in profile; role unverified (PDF Page 21)",
+    imageUrl: `${import.meta.env.BASE_URL}assets/images/project_commercial_kuya_j_1794254055188.jpg`,
     highlights: [
       "High-output electrical load connection for commercial fryers",
       "Bespoke booth seating joinery with stain-resistant commercial upholstery",
@@ -317,8 +317,8 @@ export const AUTHENTIC_PROJECTS: ProjectItem[] = [
     constructionSystem: "Heavy Duty Commercial Kitchen Tile Beds, Custom Curved Wood Portal Arches",
     role: "General Fit-Out Contractor",
     status: "Completed",
-    verifiedRelationship: "Documented Commercial Client Project (PDF Page 22)",
-    imageUrl: "/src/assets/images/project_commercial_kuya_j_1794254055188.jpg",
+    verifiedRelationship: "Commercial site pictured in profile; role unverified (PDF Page 22)",
+    imageUrl: `${import.meta.env.BASE_URL}assets/images/project_commercial_kuya_j_1794254055188.jpg`,
     highlights: [
       "Custom warm walnut arched portal dividers",
       "Dual commercial grease trap drainage system",
@@ -338,8 +338,8 @@ export const AUTHENTIC_PROJECTS: ProjectItem[] = [
     constructionSystem: "Crushed Aggregate Sub-Base with High-Bearing Heavy Aviation Asphalt Overlay",
     role: "Civil Infrastructure Specialist & Paving Contractor",
     status: "Completed",
-    verifiedRelationship: "Verified Infrastructure Portfolio Documentation (PDF pp. 23-28)",
-    imageUrl: "/src/assets/images/project_infrastructure_solar_1794254055468.jpg",
+    verifiedRelationship: "Project profile referenced; relationship unverified (PDF pp. 23-28)",
+    imageUrl: `${import.meta.env.BASE_URL}assets/images/project_infrastructure_solar_1794254055468.jpg`,
     highlights: [
       "Laser-guided grading achieving exact civil cross-slope drainage tolerances",
       "High-bearing asphaltic concrete resistant to jet fuel and thermal extremes",
@@ -359,8 +359,8 @@ export const AUTHENTIC_PROJECTS: ProjectItem[] = [
     constructionSystem: "Gabion Mattresses, Reinforced Concrete Retaining Walls, Geotextile Membrane Layering",
     role: "General Contractor for Civil Works",
     status: "Completed",
-    verifiedRelationship: "Documented Public Works Accomplishment (PDF pp. 29-31)",
-    imageUrl: "/src/assets/images/project_infrastructure_solar_1794254055468.jpg",
+    verifiedRelationship: "Project listed in profile; direct role unverified (PDF pp. 29-31)",
+    imageUrl: `${import.meta.env.BASE_URL}assets/images/project_infrastructure_solar_1794254055468.jpg`,
     highlights: [
       "Over 4.2 km of continuous reinforced riverbank slope protection",
       "Automated sluice gates for controlled wet-season agricultural irrigation",
@@ -380,8 +380,8 @@ export const AUTHENTIC_PROJECTS: ProjectItem[] = [
     constructionSystem: "Galvanized Steel Ground-Mount Racks, Prefab Concrete Substation Pads, Heavy Gravel Access Arteries",
     role: "EPC Civil & Structural Partner",
     status: "Completed",
-    verifiedRelationship: "Documented Renewable Energy Portfolio (PDF pp. 32-33)",
-    imageUrl: "/src/assets/images/project_infrastructure_solar_1794254055468.jpg",
+    verifiedRelationship: "Project images in profile; direct role unverified (PDF pp. 32-33)",
+    imageUrl: `${import.meta.env.BASE_URL}assets/images/project_infrastructure_solar_1794254055468.jpg`,
     highlights: [
       "Over 35,000 high-efficiency tier-1 photovoltaic panels mounted",
       "Engineered stormwater retention ponds and all-weather perimeter patrol roads",
@@ -400,7 +400,7 @@ export const HEAVY_EQUIPMENT_FLEET: EquipmentItem[] = [
     modelOrType: "20-Ton Class Tracked Hydraulic Excavators",
     capacityOrPower: "1.0 - 1.2 cu.m Bucket / 150 HP Turbocharged",
     typicalUse: "Deep foundation excavation, trenching, riverbank desilting, site clearing",
-    status: "Operational / Fleet Ready"
+    status: "Mobilized on Site"
   },
   {
     id: "eq-02",
@@ -409,7 +409,7 @@ export const HEAVY_EQUIPMENT_FLEET: EquipmentItem[] = [
     modelOrType: "Isuzu Giga / Hino Profia Dump Units",
     capacityOrPower: "18 - 22 cu.m Payload / 380 HP",
     typicalUse: "Bulk aggregate transport, soil disposal, quarry materials hauling",
-    status: "Operational / Fleet Ready"
+    status: "Mobilized on Site"
   },
   {
     id: "eq-03",
@@ -418,7 +418,7 @@ export const HEAVY_EQUIPMENT_FLEET: EquipmentItem[] = [
     modelOrType: "Heavy Wheel Loaders",
     capacityOrPower: "3.2 cu.m Bucket Capacity / 195 HP",
     typicalUse: "Batch plant material charging, aggregate stockpiling, bulk loading",
-    status: "Operational / Fleet Ready"
+    status: "Mobilized on Site"
   },
   {
     id: "eq-04",
@@ -427,7 +427,7 @@ export const HEAVY_EQUIPMENT_FLEET: EquipmentItem[] = [
     modelOrType: "Tadano / Kato Hydraulic All-Terrain Cranes",
     capacityOrPower: "25 - 50 Metric Ton Lifting Capacity",
     typicalUse: "Structural steel erection, precast beam lifting, rooftop chiller hoisting",
-    status: "Operational / Fleet Ready"
+    status: "Mobilized on Site"
   },
   {
     id: "eq-05",
@@ -436,7 +436,7 @@ export const HEAVY_EQUIPMENT_FLEET: EquipmentItem[] = [
     modelOrType: "Heavy Commercial Concrete Agitator Units",
     capacityOrPower: "8 - 10 cu.m Drum Capacity",
     typicalUse: "Ready-mix structural concrete pours, foundation footings, highway slabs",
-    status: "Operational / Fleet Ready"
+    status: "Mobilized on Site"
   },
   {
     id: "eq-06",
@@ -445,7 +445,7 @@ export const HEAVY_EQUIPMENT_FLEET: EquipmentItem[] = [
     modelOrType: "Dynapac / Bomag Vibratory Compactor",
     capacityOrPower: "10 - 12 Ton Operating Weight / Dynamic Centrifugal Force",
     typicalUse: "Runway sub-base compaction, road embankment stabilization, asphalt surfacing",
-    status: "Operational / Fleet Ready"
+    status: "Mobilized on Site"
   },
   {
     id: "eq-07",
@@ -454,7 +454,7 @@ export const HEAVY_EQUIPMENT_FLEET: EquipmentItem[] = [
     modelOrType: "Denyo / Cummins Silent Containerized Gensets",
     capacityOrPower: "150 kVA - 500 kVA Prime Output",
     typicalUse: "Continuous site power, tower crane operation, off-grid infrastructure sites",
-    status: "Operational / Fleet Ready"
+    status: "Mobilized on Site"
   },
   {
     id: "eq-08",
@@ -463,7 +463,7 @@ export const HEAVY_EQUIPMENT_FLEET: EquipmentItem[] = [
     modelOrType: "Leica / Topcon Robotic Geospatial Systems",
     capacityOrPower: "Sub-millimeter EDM Accuracy / RTK Satellite Sync",
     typicalUse: "Building layout staking, boundary verification, grade monitoring",
-    status: "Operational / Fleet Ready"
+    status: "Mobilized on Site"
   }
 ];
 

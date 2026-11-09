@@ -82,61 +82,7 @@ export const ConsultationSection: React.FC<ConsultationSectionProps> = ({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!validateForm()) return;
-
-    setIsSubmitting(true);
-
-    // Generate formal inquiry reference number
-    const randomSuffix = Math.floor(1000 + Math.random() * 9000);
-    const referenceNo = `JZI-2026-${randomSuffix}`;
-
-    const newInquiry: InquirySubmission = {
-      id: `inq-${Date.now()}`,
-      referenceNo,
-      fullName: fullName.trim(),
-      companyName: companyName.trim() || undefined,
-      email: email.trim(),
-      contactNumber: contactNumber.trim(),
-      projectType,
-      projectLocation: projectLocation.trim(),
-      lotArea: lotArea.trim() || undefined,
-      estimatedFloorArea: estimatedFloorArea.trim() || undefined,
-      budgetRange: budgetRange.trim() || undefined,
-      targetTimeline,
-      projectDescription: projectDescription.trim(),
-      drawingFileName: uploadedFileName || undefined,
-      status: 'New',
-      submittedAt: new Date().toISOString(),
-    };
-
-    setTimeout(() => {
-      // Save to localStorage for client-side persistence and admin sync
-      try {
-        const existing = JSON.parse(localStorage.getItem('jzi_inquiries') || '[]');
-        const updated = [newInquiry, ...existing];
-        localStorage.setItem('jzi_inquiries', JSON.stringify(updated));
-      } catch (err) {
-        console.warn('Storage sync:', err);
-      }
-
-      setIsSubmitting(false);
-      setSubmittedReceipt(newInquiry);
-      if (onInquirySubmitted) onInquirySubmitted(newInquiry);
-
-      // Reset form fields
-      setFullName('');
-      setCompanyName('');
-      setEmail('');
-      setContactNumber('');
-      setProjectLocation('');
-      setLotArea('');
-      setEstimatedFloorArea('');
-      setBudgetRange('');
-      setProjectDescription('');
-      setUploadedFileName('');
-      setPrivacyConsent(false);
-      setErrors({});
-    }, 600);
+    setErrors({ submit: 'Online inquiries are temporarily unavailable. Please contact JZI using its official email or telephone numbers.' });
   };
 
   const handleCopyCode = (code: string) => {
@@ -147,46 +93,13 @@ export const ConsultationSection: React.FC<ConsultationSectionProps> = ({
 
   const handleLookup = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!lookupCode.trim()) return;
-
-    const codeToSearch = lookupCode.trim().toUpperCase();
-    try {
-      const stored: InquirySubmission[] = JSON.parse(localStorage.getItem('jzi_inquiries') || '[]');
-      const found = stored.find(
-        (item) => item.referenceNo.toUpperCase() === codeToSearch || item.id.toUpperCase() === codeToSearch
-      );
-
-      if (found) {
-        setLookupResult(found);
-      } else {
-        // Fallback demo matching default sample code
-        if (codeToSearch === 'JZI-2026-8801') {
-          setLookupResult({
-            id: 'inq-sample-1',
-            referenceNo: 'JZI-2026-8801',
-            fullName: 'Atty. Roberto Dela Cruz',
-            email: 'r.delacruz@sample.ph',
-            contactNumber: '+63 917 555 1234',
-            projectType: 'Residential Construction',
-            projectLocation: 'Tagaytay Highlands, Cavite',
-            targetTimeline: '1 to 3 Months',
-            projectDescription: '3-Storey contemporary residence on sloping lot with panoramic view.',
-            status: 'In Review',
-            submittedAt: new Date(Date.now() - 86400000).toISOString(),
-            notes: 'Preliminary architectural review conducted; site surveyor scheduled for topographic layout.'
-          });
-        } else {
-          setLookupResult('not_found');
-        }
-      }
-    } catch {
-      setLookupResult('not_found');
-    }
+    setLookupResult('not_found');
   };
 
   return (
     <section id="consultation-section" className="py-20 bg-[#F8F6F1] border-t border-zinc-200">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div role="status" className="mb-6 rounded border border-amber-300 bg-amber-50 p-4 text-sm text-amber-950">Online submissions and status tracking are temporarily unavailable while secure backend integration is being completed. Please contact JZI at {CORPORATE_IDENTITY.contact.email} or {CORPORATE_IDENTITY.contact.phone}.</div>
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto space-y-3 mb-10">
           <div className="flex justify-center mb-1">
@@ -212,7 +125,7 @@ export const ConsultationSection: React.FC<ConsultationSectionProps> = ({
                   : 'text-zinc-600 hover:text-zinc-900'
               }`}
             >
-              Submit New Project Inquiry
+              Online Inquiry Unavailable
             </button>
             <button
               onClick={() => setActiveTab('lookup')}
@@ -222,7 +135,7 @@ export const ConsultationSection: React.FC<ConsultationSectionProps> = ({
                   : 'text-zinc-600 hover:text-zinc-900'
               }`}
             >
-              Track Inquiry Status
+              Status Tracking Unavailable
             </button>
           </div>
         </div>
@@ -529,7 +442,7 @@ export const ConsultationSection: React.FC<ConsultationSectionProps> = ({
 
                   <button
                     type="submit"
-                    disabled={isSubmitting}
+                    disabled={true}
                     className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3 text-xs font-bold uppercase tracking-wider text-[#0B1933] bg-gradient-to-r from-[#DFB86C] via-[#C99A3D] to-[#DFB86C] hover:brightness-105 active:scale-95 disabled:opacity-50 transition-all rounded shadow-md"
                   >
                     {isSubmitting ? (
