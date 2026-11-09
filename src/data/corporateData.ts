@@ -93,11 +93,11 @@ export const CORPORATE_IDENTITY = {
   professionalDisclaimer:
     "Professional services requiring licenses, registrations, or specific authorizations are provided by appropriately qualified and authorized practitioners.",
   contact: {
-    address: "Metro Manila & Regional Project Offices, Philippines",
-    phone: "+63 (02) 8876-JZI / +63 917 555 4321",
-    email: "inquiries@jziconstruction.com",
-    hours: "Monday – Saturday: 8:00 AM – 6:00 PM PHT",
-    emergencySupport: "24/7 Site Engineering Dispatch for Active Contracts"
+    address: "Unit 5k Seina Tower 1, Marikina, Philippines",
+    phone: "+63 977-829-2851 / +63 933-210-6739 / (02) 7341-7233",
+    email: "jziarchitectural@gmail.com",
+    hours: "Contact for office hours",
+    emergencySupport: "For project inquiries, use the official contact numbers."
   }
 };
 
@@ -229,7 +229,7 @@ export const AUTHENTIC_PROJECTS: ProjectItem[] = [
     role: "Architect of Record & General Contractor",
     status: "Completed",
     verifiedRelationship: "Direct Design & Build Contract",
-    imageUrl: "/src/assets/images/project_residential_villa_1794254055730.jpg",
+    imageUrl: "/assets/images/project_residential_villa_1794254055730.jpg",
     highlights: [
       "Triple-height glass curtain wall with automated shading",
       "Cantilevered master terrace overlooking coastal hills",
@@ -252,7 +252,7 @@ export const AUTHENTIC_PROJECTS: ProjectItem[] = [
     role: "General Contractor & Engineering Supervision",
     status: "Completed",
     verifiedRelationship: "Verified Project Profile Documentation (pp. 12-17)",
-    imageUrl: "/src/assets/images/project_residential_villa_1794254055730.jpg",
+    imageUrl: "/assets/images/project_residential_villa_1794254055730.jpg",
     highlights: [
       "Dual independent utility metering and acoustic party walls",
       "Private garden courtyards for each residential wing",
@@ -274,7 +274,7 @@ export const AUTHENTIC_PROJECTS: ProjectItem[] = [
     role: "General Fit-Out Contractor & MEP Coordinator",
     status: "Completed",
     verifiedRelationship: "Documented Commercial Client Project (PDF Page 18-20)",
-    imageUrl: "/src/assets/images/project_commercial_kuya_j_1794254055188.jpg",
+    imageUrl: "/assets/images/project_commercial_kuya_j_1794254055188.jpg",
     highlights: [
       "Precision-milled acoustic wood ceiling lattice",
       "Heavy-duty commercial kitchen exhaust with wet-chemical fire suppression",
@@ -296,7 +296,7 @@ export const AUTHENTIC_PROJECTS: ProjectItem[] = [
     role: "General Fit-Out Contractor",
     status: "Completed",
     verifiedRelationship: "Documented Commercial Client Project (PDF Page 21)",
-    imageUrl: "/src/assets/images/project_commercial_kuya_j_1794254055188.jpg",
+    imageUrl: "/assets/images/project_commercial_kuya_j_1794254055188.jpg",
     highlights: [
       "High-output electrical load connection for commercial fryers",
       "Bespoke booth seating joinery with stain-resistant commercial upholstery",
@@ -318,7 +318,7 @@ export const AUTHENTIC_PROJECTS: ProjectItem[] = [
     role: "General Fit-Out Contractor",
     status: "Completed",
     verifiedRelationship: "Documented Commercial Client Project (PDF Page 22)",
-    imageUrl: "/src/assets/images/project_commercial_kuya_j_1794254055188.jpg",
+    imageUrl: "/assets/images/project_commercial_kuya_j_1794254055188.jpg",
     highlights: [
       "Custom warm walnut arched portal dividers",
       "Dual commercial grease trap drainage system",
@@ -339,7 +339,7 @@ export const AUTHENTIC_PROJECTS: ProjectItem[] = [
     role: "Civil Infrastructure Specialist & Paving Contractor",
     status: "Completed",
     verifiedRelationship: "Verified Infrastructure Portfolio Documentation (PDF pp. 23-28)",
-    imageUrl: "/src/assets/images/project_infrastructure_solar_1794254055468.jpg",
+    imageUrl: "/assets/images/project_infrastructure_solar_1794254055468.jpg",
     highlights: [
       "Laser-guided grading achieving exact civil cross-slope drainage tolerances",
       "High-bearing asphaltic concrete resistant to jet fuel and thermal extremes",
@@ -360,7 +360,7 @@ export const AUTHENTIC_PROJECTS: ProjectItem[] = [
     role: "General Contractor for Civil Works",
     status: "Completed",
     verifiedRelationship: "Documented Public Works Accomplishment (PDF pp. 29-31)",
-    imageUrl: "/src/assets/images/project_infrastructure_solar_1794254055468.jpg",
+    imageUrl: "/assets/images/project_infrastructure_solar_1794254055468.jpg",
     highlights: [
       "Over 4.2 km of continuous reinforced riverbank slope protection",
       "Automated sluice gates for controlled wet-season agricultural irrigation",
@@ -381,7 +381,7 @@ export const AUTHENTIC_PROJECTS: ProjectItem[] = [
     role: "EPC Civil & Structural Partner",
     status: "Completed",
     verifiedRelationship: "Documented Renewable Energy Portfolio (PDF pp. 32-33)",
-    imageUrl: "/src/assets/images/project_infrastructure_solar_1794254055468.jpg",
+    imageUrl: "/assets/images/project_infrastructure_solar_1794254055468.jpg",
     highlights: [
       "Over 35,000 high-efficiency tier-1 photovoltaic panels mounted",
       "Engineered stormwater retention ponds and all-weather perimeter patrol roads",
