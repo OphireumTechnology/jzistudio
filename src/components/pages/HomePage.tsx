@@ -39,8 +39,8 @@ export const HomePage: React.FC<HomePageProps> = ({
         {/* Content Container */}
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8 py-16">
           {/* Tagline Badge */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded border border-[#C99A3D]/40 bg-[#0B1933]/80 backdrop-blur-sm text-xs font-semibold text-[#DFB86C] uppercase tracking-widest animate-in fade-in slide-in-from-top-4 duration-700">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#C99A3D]" />
+          <div className="inline-flex max-w-full items-center justify-center gap-2 px-3 py-2 rounded border border-[#C99A3D]/40 bg-[#0B1933]/80 backdrop-blur-sm text-[10px] sm:text-xs font-semibold text-center leading-relaxed text-[#DFB86C] uppercase tracking-normal sm:tracking-widest animate-in fade-in slide-in-from-top-4 duration-700">
+            <span className="hidden sm:block w-1.5 h-1.5 shrink-0 rounded-full bg-[#C99A3D]" />
             <span>Architects • Engineers • General Contractor</span>
           </div>
 
@@ -77,14 +77,14 @@ export const HomePage: React.FC<HomePageProps> = ({
             <a
               href={PROFILE_URL}
               download={PROFILE_FILE_NAME}
-              className="group inline-flex items-center gap-3 px-6 py-3 rounded-lg bg-[#0B1933]/90 hover:bg-[#0B1933] border border-[#C99A3D]/70 hover:border-[#DFB86C] text-[#DFB86C] hover:text-white transition-all duration-300 shadow-lg shadow-[#0B1933]/50 hover:shadow-[#C99A3D]/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#C99A3D]"
+              className="group inline-flex max-w-full items-center gap-3 px-3 sm:px-6 py-3 rounded-lg bg-[#0B1933]/90 hover:bg-[#0B1933] border border-[#C99A3D]/70 hover:border-[#DFB86C] text-[#DFB86C] hover:text-white transition-all duration-300 shadow-lg shadow-[#0B1933]/50 hover:shadow-[#C99A3D]/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#C99A3D]"
               aria-label="Download JZI Studio Company Profile 2026 PDF"
             >
               <div className="flex h-8 w-8 items-center justify-center rounded bg-[#C99A3D]/20 text-[#DFB86C] transition-transform duration-300 group-hover:translate-y-0.5">
                 <FileDown size={18} aria-hidden="true" />
               </div>
               <div className="flex flex-col text-left">
-                <span className="text-xs font-bold uppercase tracking-wider text-white group-hover:text-[#DFB86C] transition-colors">
+                <span className="text-[10px] sm:text-xs font-bold uppercase tracking-normal sm:tracking-wider text-white group-hover:text-[#DFB86C] transition-colors">
                   Download Company Profile 2026
                 </span>
                 <span className="text-[10px] text-zinc-400 font-normal">
