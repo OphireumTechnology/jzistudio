@@ -30,7 +30,7 @@ export function OfficialLogo({
     <div className={`inline-flex items-center gap-3 select-none ${className}`}>
       {/* Official Circular Metallic-Gold JZI Logo (Approved Corporate Asset) */}
       <img
-        src="/branding/jzi-official-logo.png"
+        src={`${import.meta.env.BASE_URL}branding/jzi-official-logo.png`}
         alt="JZI Studio & Construction Services Inc. Official Logo"
         width={pixelSize}
         height={pixelSize}
