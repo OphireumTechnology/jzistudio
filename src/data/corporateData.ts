@@ -229,7 +229,7 @@ export const AUTHENTIC_PROJECTS: ProjectItem[] = [
     role: "Architect of Record & General Contractor",
     status: "Completed",
     verifiedRelationship: "Direct Design & Build Contract",
-    imageUrl: "/assets/images/project_residential_villa_1794254055730.jpg",
+    imageUrl: `${import.meta.env.BASE_URL}assets/images/project_residential_villa_1794254055730.jpg`,
     highlights: [
       "Triple-height glass curtain wall with automated shading",
       "Cantilevered master terrace overlooking coastal hills",
@@ -252,7 +252,7 @@ export const AUTHENTIC_PROJECTS: ProjectItem[] = [
     role: "General Contractor & Engineering Supervision",
     status: "Completed",
     verifiedRelationship: "Project profile referenced; relationship unverified (pp. 12-17)",
-    imageUrl: "/assets/images/project_residential_villa_1794254055730.jpg",
+    imageUrl: `${import.meta.env.BASE_URL}assets/images/project_residential_villa_1794254055730.jpg`,
     highlights: [
       "Dual independent utility metering and acoustic party walls",
       "Private garden courtyards for each residential wing",
@@ -274,7 +274,7 @@ export const AUTHENTIC_PROJECTS: ProjectItem[] = [
     role: "General Fit-Out Contractor & MEP Coordinator",
     status: "Completed",
     verifiedRelationship: "Commercial site pictured in profile; role unverified (PDF Page 18-20)",
-    imageUrl: "/assets/images/project_commercial_kuya_j_1794254055188.jpg",
+    imageUrl: `${import.meta.env.BASE_URL}assets/images/project_commercial_kuya_j_1794254055188.jpg`,
     highlights: [
       "Precision-milled acoustic wood ceiling lattice",
       "Heavy-duty commercial kitchen exhaust with wet-chemical fire suppression",
@@ -296,7 +296,7 @@ export const AUTHENTIC_PROJECTS: ProjectItem[] = [
     role: "General Fit-Out Contractor",
     status: "Completed",
     verifiedRelationship: "Commercial site pictured in profile; role unverified (PDF Page 21)",
-    imageUrl: "/assets/images/project_commercial_kuya_j_1794254055188.jpg",
+    imageUrl: `${import.meta.env.BASE_URL}assets/images/project_commercial_kuya_j_1794254055188.jpg`,
     highlights: [
       "High-output electrical load connection for commercial fryers",
       "Bespoke booth seating joinery with stain-resistant commercial upholstery",
@@ -318,7 +318,7 @@ export const AUTHENTIC_PROJECTS: ProjectItem[] = [
     role: "General Fit-Out Contractor",
     status: "Completed",
     verifiedRelationship: "Commercial site pictured in profile; role unverified (PDF Page 22)",
-    imageUrl: "/assets/images/project_commercial_kuya_j_1794254055188.jpg",
+    imageUrl: `${import.meta.env.BASE_URL}assets/images/project_commercial_kuya_j_1794254055188.jpg`,
     highlights: [
       "Custom warm walnut arched portal dividers",
       "Dual commercial grease trap drainage system",
@@ -339,7 +339,7 @@ export const AUTHENTIC_PROJECTS: ProjectItem[] = [
     role: "Civil Infrastructure Specialist & Paving Contractor",
     status: "Completed",
     verifiedRelationship: "Project profile referenced; relationship unverified (PDF pp. 23-28)",
-    imageUrl: "/assets/images/project_infrastructure_solar_1794254055468.jpg",
+    imageUrl: `${import.meta.env.BASE_URL}assets/images/project_infrastructure_solar_1794254055468.jpg`,
     highlights: [
       "Laser-guided grading achieving exact civil cross-slope drainage tolerances",
       "High-bearing asphaltic concrete resistant to jet fuel and thermal extremes",
@@ -360,7 +360,7 @@ export const AUTHENTIC_PROJECTS: ProjectItem[] = [
     role: "General Contractor for Civil Works",
     status: "Completed",
     verifiedRelationship: "Project listed in profile; direct role unverified (PDF pp. 29-31)",
-    imageUrl: "/assets/images/project_infrastructure_solar_1794254055468.jpg",
+    imageUrl: `${import.meta.env.BASE_URL}assets/images/project_infrastructure_solar_1794254055468.jpg`,
     highlights: [
       "Over 4.2 km of continuous reinforced riverbank slope protection",
       "Automated sluice gates for controlled wet-season agricultural irrigation",
@@ -381,7 +381,7 @@ export const AUTHENTIC_PROJECTS: ProjectItem[] = [
     role: "EPC Civil & Structural Partner",
     status: "Completed",
     verifiedRelationship: "Project images in profile; direct role unverified (PDF pp. 32-33)",
-    imageUrl: "/assets/images/project_infrastructure_solar_1794254055468.jpg",
+    imageUrl: `${import.meta.env.BASE_URL}assets/images/project_infrastructure_solar_1794254055468.jpg`,
     highlights: [
       "Over 35,000 high-efficiency tier-1 photovoltaic panels mounted",
       "Engineered stormwater retention ponds and all-weather perimeter patrol roads",
