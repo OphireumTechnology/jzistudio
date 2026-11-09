@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { CORPORATE_IDENTITY } from '../../data/corporateData';
+import { CORPORATE_IDENTITY, JZI_CONTACT } from '../../data/corporateData';
 import { JziLogo } from '../brand/JziLogo';
-import { Shield, Target, Compass, Award, HeartHandshake, Leaf, Lock, CheckCircle2 } from 'lucide-react';
+import { PROFILE_URL, PROFILE_FILE_NAME } from '../brand/CompanyProfileActions';
+import { Shield, Target, Compass, Award, HeartHandshake, Leaf, Lock, CheckCircle2, Phone, Mail, ArrowRight, FileDown, FileText } from 'lucide-react';
 
 interface AboutPageProps {
   onOpenConsultation: () => void;
@@ -201,6 +202,86 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenConsultation }) => {
           </p>
           <div className="pt-2 text-xs text-zinc-500">
             {CORPORATE_IDENTITY.professionalDisclaimer}
+          </div>
+        </div>
+      </section>
+
+      {/* Dedicated Company Profile Section: Explore Our Company */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="rounded-xl border border-[#C99A3D]/40 bg-gradient-to-br from-[#0B1933] via-[#0B1933] to-[#122447] p-8 sm:p-12 text-white shadow-xl flex flex-col lg:flex-row items-center justify-between gap-8">
+          <div className="space-y-3 max-w-2xl text-center lg:text-left">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-[#C99A3D]/20 border border-[#C99A3D]/50 text-xs font-bold text-[#DFB86C] uppercase tracking-widest">
+              <FileDown className="w-3.5 h-3.5" />
+              <span>Official Corporate Dossier</span>
+            </div>
+            <h2 className="font-['Outfit'] text-2xl sm:text-3xl font-bold tracking-tight text-white">
+              Explore Our Company
+            </h2>
+            <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed">
+              Discover JZI Studio & Construction Services Inc., our design and construction capabilities, professional services, project portfolio, and company credentials.
+            </p>
+            <p className="text-[11px] text-zinc-400">
+              Official 40-page publication featuring company introduction, welcome message, vision & mission, individual engineering services, constructed project galleries, equipment fleet, and regulatory permits.
+            </p>
+          </div>
+
+          <div className="shrink-0 flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
+            <a
+              href={PROFILE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-lg border border-[#C99A3D] px-6 py-3.5 text-xs font-bold uppercase tracking-wider text-[#DFB86C] hover:bg-[#C99A3D]/15 hover:text-white transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#C99A3D]"
+              aria-label="View JZI Studio Company Profile 2026 PDF in new tab"
+            >
+              <FileText size={18} aria-hidden="true" />
+              <span>View Company Profile</span>
+            </a>
+
+            <a
+              href={PROFILE_URL}
+              download={PROFILE_FILE_NAME}
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-lg bg-[#C99A3D] hover:bg-[#DFB86C] px-6 py-3.5 text-xs font-bold uppercase tracking-wider text-[#0B1933] shadow-md transition-all duration-300 active:scale-[0.98] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#C99A3D]"
+              aria-label="Download JZI Studio Company Profile 2026 PDF"
+            >
+              <FileDown size={18} aria-hidden="true" />
+              <span>Download PDF</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Corporate Inquiries & Direct Communication */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="p-8 bg-[#0B1933] text-white rounded-xl border border-[#C99A3D]/40 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
+          <div className="space-y-1 text-center md:text-left">
+            <span className="text-[10px] uppercase font-bold tracking-widest text-[#DFB86C]">
+              Direct Corporate Engagement
+            </span>
+            <h3 className="font-['Outfit'] font-bold text-lg text-white">
+              Consult with Our Principal Architects & Engineers
+            </h3>
+            <p className="text-xs text-zinc-300">
+              For commercial bids, joint ventures, or residential development feasibility:
+            </p>
+          </div>
+
+          <div className="flex flex-col sm:flex-row items-center gap-4 text-xs font-semibold">
+            <a
+              href={JZI_CONTACT.phoneLink}
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded bg-white/10 hover:bg-white/20 border border-white/15 text-white transition-colors"
+              title={`Call ${JZI_CONTACT.phone}`}
+            >
+              <Phone className="w-3.5 h-3.5 text-[#C99A3D]" />
+              <span className="font-mono">{JZI_CONTACT.phone}</span>
+            </a>
+            <a
+              href={JZI_CONTACT.emailLink}
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded bg-white/10 hover:bg-white/20 border border-white/15 text-white transition-colors"
+              title={`Email ${JZI_CONTACT.email}`}
+            >
+              <Mail className="w-3.5 h-3.5 text-[#C99A3D]" />
+              <span>{JZI_CONTACT.email}</span>
+            </a>
           </div>
         </div>
       </section>

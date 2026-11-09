@@ -1,8 +1,9 @@
 import React from 'react';
-import { CORPORATE_IDENTITY, CORE_SERVICES, AUTHENTIC_PROJECTS, ProjectItem } from '../../data/corporateData';
+import { CORPORATE_IDENTITY, CORE_SERVICES, AUTHENTIC_PROJECTS, ProjectItem, JZI_CONTACT } from '../../data/corporateData';
 import { OfficialLogo } from '../brand/JziLogo';
+import { CompanyProfileActions, PROFILE_URL, PROFILE_FILE_NAME } from '../brand/CompanyProfileActions';
 import { BlueprintSlider } from '../home/BlueprintSlider';
-import { ArrowRight, Compass, Shield, CheckCircle2, ChevronRight, HardHat, Sparkles, FileDown, Check } from 'lucide-react';
+import { ArrowRight, Compass, Shield, CheckCircle2, ChevronRight, HardHat, Sparkles, FileDown, Check, Phone, Mail } from 'lucide-react';
 
 interface HomePageProps {
   onNavigate: (view: string) => void;
@@ -69,6 +70,28 @@ export const HomePage: React.FC<HomePageProps> = ({
             >
               <span>Request Consultation</span>
             </button>
+          </div>
+
+          {/* Premium Download Company Profile 2026 Action */}
+          <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
+            <a
+              href={PROFILE_URL}
+              download={PROFILE_FILE_NAME}
+              className="group inline-flex items-center gap-3 px-6 py-3 rounded-lg bg-[#0B1933]/90 hover:bg-[#0B1933] border border-[#C99A3D]/70 hover:border-[#DFB86C] text-[#DFB86C] hover:text-white transition-all duration-300 shadow-lg shadow-[#0B1933]/50 hover:shadow-[#C99A3D]/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#C99A3D]"
+              aria-label="Download JZI Studio Company Profile 2026 PDF"
+            >
+              <div className="flex h-8 w-8 items-center justify-center rounded bg-[#C99A3D]/20 text-[#DFB86C] transition-transform duration-300 group-hover:translate-y-0.5">
+                <FileDown size={18} aria-hidden="true" />
+              </div>
+              <div className="flex flex-col text-left">
+                <span className="text-xs font-bold uppercase tracking-wider text-white group-hover:text-[#DFB86C] transition-colors">
+                  Download Company Profile 2026
+                </span>
+                <span className="text-[10px] text-zinc-400 font-normal">
+                  Official Company Profile • 2026 • PDF
+                </span>
+              </div>
+            </a>
           </div>
 
           {/* Proof Strip */}
@@ -352,23 +375,23 @@ export const HomePage: React.FC<HomePageProps> = ({
               <p className="text-xs text-zinc-600 max-w-lg leading-relaxed">
                 40-page comprehensive dossier detailing corporate charter, licensed architectural and engineering methodologies, verified project accomplishments, heavy equipment registry, and PCAB credentials.
               </p>
+              <div className="pt-1 flex flex-wrap items-center gap-3 text-[11px] text-zinc-500">
+                <span className="font-semibold text-zinc-700">Direct Inquiries:</span>
+                <a href={JZI_CONTACT.phoneLink} className="inline-flex items-center gap-1 font-mono text-[#0B1933] font-semibold hover:text-[#C99A3D] transition-colors">
+                  <Phone className="w-3 h-3 text-[#C99A3D]" />
+                  <span>{JZI_CONTACT.phone}</span>
+                </a>
+                <span>·</span>
+                <a href={JZI_CONTACT.emailLink} className="inline-flex items-center gap-1 text-[#0B1933] font-semibold hover:text-[#C99A3D] transition-colors">
+                  <Mail className="w-3 h-3 text-[#C99A3D]" />
+                  <span>{JZI_CONTACT.email}</span>
+                </a>
+              </div>
             </div>
           </div>
 
-          <div className="flex items-center gap-3 shrink-0 w-full sm:w-auto">
-            <button
-              onClick={() => onNavigate('about')}
-              className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-5 py-2.5 text-xs font-semibold text-zinc-700 bg-zinc-100 hover:bg-zinc-200 rounded transition-colors"
-            >
-              <span>Explore Profile</span>
-            </button>
-            <button
-              onClick={() => onOpenConsultation('Request Official 40-Page Company Profile PDF')}
-              className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-6 py-2.5 text-xs font-bold uppercase tracking-wider text-[#0B1933] bg-[#C99A3D] hover:bg-[#DFB86C] rounded transition-all shadow"
-            >
-              <FileDown className="w-4 h-4" />
-              <span>Request Full PDF</span>
-            </button>
+          <div className="shrink-0 w-full sm:w-auto">
+            <CompanyProfileActions showSecondaryLabel={true} />
           </div>
         </div>
       </section>

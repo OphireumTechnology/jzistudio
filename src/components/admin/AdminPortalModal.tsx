@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { InquirySubmission, ProjectItem, AUTHENTIC_PROJECTS, CORPORATE_CREDENTIALS } from '../../data/corporateData';
+import { InquirySubmission, ProjectItem, AUTHENTIC_PROJECTS, CORPORATE_CREDENTIALS, JZI_CONTACT } from '../../data/corporateData';
 import { OfficialLogo } from '../brand/JziLogo';
-import { X, Lock, Shield, CheckCircle, Clock, FileText, Settings, LogOut, Search, Edit3 } from 'lucide-react';
+import { X, Lock, Shield, CheckCircle, Clock, FileText, Settings, LogOut, Search, Edit3, Phone, Mail } from 'lucide-react';
 
 interface AdminPortalModalProps {
   isOpen: boolean;
@@ -229,6 +229,25 @@ export const AdminPortalModal: React.FC<AdminPortalModalProps> = ({
               >
                 Authenticate Session
               </button>
+
+              {/* Administrative Contact Configuration Status */}
+              <div className="pt-3 border-t border-zinc-200 text-[11px] text-zinc-600 space-y-1.5">
+                <span className="font-semibold text-zinc-800 block text-[10px] uppercase tracking-wider">
+                  Configured Corporate Dispatch Channels:
+                </span>
+                <div className="flex items-center justify-between">
+                  <span className="text-zinc-500">Official Phone:</span>
+                  <a href={JZI_CONTACT.phoneLink} className="font-mono font-semibold text-[#0B1933] hover:underline">
+                    {JZI_CONTACT.phone}
+                  </a>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-zinc-500">Official Email:</span>
+                  <a href={JZI_CONTACT.emailLink} className="font-semibold text-[#0B1933] hover:underline">
+                    {JZI_CONTACT.email}
+                  </a>
+                </div>
+              </div>
             </form>
           </div>
         ) : (

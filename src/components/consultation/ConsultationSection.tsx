@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { InquirySubmission, CORPORATE_IDENTITY } from '../../data/corporateData';
+import { InquirySubmission, CORPORATE_IDENTITY, JZI_CONTACT } from '../../data/corporateData';
 import { OfficialLogo } from '../brand/JziLogo';
 import { CheckCircle2, AlertCircle, FileUp, Send, Search, PhoneCall, ShieldCheck, Copy, Check } from 'lucide-react';
 
@@ -269,7 +269,7 @@ export const ConsultationSection: React.FC<ConsultationSectionProps> = ({
                       type="tel"
                       value={contactNumber}
                       onChange={(e) => setContactNumber(e.target.value)}
-                      placeholder="+63 917 000 0000"
+                      placeholder="+63 977 829 2851"
                       className={`w-full px-3.5 py-2 text-xs rounded border ${
                         errors.contactNumber ? 'border-red-500 bg-red-50/50' : 'border-zinc-300 focus:border-[#C99A3D]'
                       } focus:outline-none transition-colors`}
@@ -496,9 +496,15 @@ export const ConsultationSection: React.FC<ConsultationSectionProps> = ({
             {lookupResult === 'not_found' && (
               <div className="p-4 bg-amber-50 border border-amber-200 rounded text-center text-xs text-amber-800 space-y-1">
                 <AlertCircle className="w-5 h-5 mx-auto text-amber-600 mb-1" />
-                <p className="font-semibold">Reference code not found</p>
                 <p className="text-[11px] text-amber-700">
-                  Please verify your reference number or contact our project office at {CORPORATE_IDENTITY.contact.phone}.
+                  Please verify your reference number or contact our project office at{' '}
+                  <a href={JZI_CONTACT.phoneLink} className="font-semibold underline font-mono hover:text-[#0B1933]">
+                    {JZI_CONTACT.phone}
+                  </a>{' '}
+                  or via email at{' '}
+                  <a href={JZI_CONTACT.emailLink} className="font-semibold underline hover:text-[#0B1933]">
+                    {JZI_CONTACT.email}
+                  </a>.
                 </p>
               </div>
             )}

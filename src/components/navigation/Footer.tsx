@@ -1,7 +1,8 @@
 import React from 'react';
 import { JziLogo } from '../brand/JziLogo';
 import { CORPORATE_IDENTITY } from '../../data/corporateData';
-import { MapPin, Phone, Mail, Clock, Shield, ArrowUp } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Shield, ArrowUp, FileDown } from 'lucide-react';
+import { PROFILE_URL, PROFILE_FILE_NAME } from '../brand/CompanyProfileActions';
 
 interface FooterProps {
   onNavigate: (view: string) => void;
@@ -43,6 +44,20 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenAdmin }) => {
                 {CORPORATE_IDENTITY.secondaryTagline}
               </span>
             </p>
+
+            {/* Compact Company Profile Download Link */}
+            <div className="pt-1">
+              <a
+                href={PROFILE_URL}
+                download={PROFILE_FILE_NAME}
+                className="inline-flex items-center gap-2 text-xs font-semibold text-[#DFB86C] hover:text-white transition-colors border border-[#C99A3D]/40 hover:border-[#DFB86C] bg-white/5 hover:bg-white/10 px-3 py-1.5 rounded"
+                title="Download Company Profile 2026 PDF"
+                aria-label="Download JZI Studio Company Profile 2026 PDF"
+              >
+                <FileDown className="w-3.5 h-3.5 text-[#C99A3D]" />
+                <span>Company Profile 2026 (PDF)</span>
+              </a>
+            </div>
           </div>
 
           {/* Column 2: Navigation Directory */}
@@ -106,6 +121,16 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenAdmin }) => {
                 >
                   Credentials & PCAB Licenses
                 </button>
+              </li>
+              <li className="pt-1">
+                <a
+                  href={PROFILE_URL}
+                  download={PROFILE_FILE_NAME}
+                  className="hover:text-[#DFB86C] transition-colors inline-flex items-center gap-1.5 text-zinc-300 font-medium"
+                >
+                  <FileDown className="w-3 h-3 text-[#C99A3D]" />
+                  <span>Company Profile 2026 (PDF)</span>
+                </a>
               </li>
             </ul>
           </div>

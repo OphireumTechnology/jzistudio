@@ -95,10 +95,24 @@ export const CORPORATE_IDENTITY = {
   contact: {
     address: "Unit 5k Seina Tower 1, Marikina, Philippines",
     phone: "+63 977 829 2851",
+    phoneLink: "tel:+639778292851",
     email: "jziarchitectural@gmail.com",
+    emailLink: "mailto:jziarchitectural@gmail.com",
     hours: "Contact for office hours",
     emergencySupport: "For project inquiries, use the official contact numbers."
   }
+};
+
+export const JZI_CONTACT = {
+  companyName: "JZI Studio & Construction Services Inc.",
+  phone: "+63 977 829 2851",
+  phoneLink: "tel:+639778292851",
+  email: "jziarchitectural@gmail.com",
+  emailLink: "mailto:jziarchitectural@gmail.com",
+  address: "Unit 5k Seina Tower 1, Marikina, Philippines",
+  hours: "Contact for office hours",
+  emergencySupport: "For project inquiries, use the official contact numbers.",
+  websiteUrl: "https://jzistudio.com"
 };
 
 export const CORE_SERVICES: ServiceItem[] = [
