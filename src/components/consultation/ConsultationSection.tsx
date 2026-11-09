@@ -82,7 +82,10 @@ export const ConsultationSection: React.FC<ConsultationSectionProps> = ({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setErrors({ submit: 'Online inquiries are temporarily unavailable. Please contact JZI using its official email or telephone numbers.' });
+    if (!validateForm()) return;
+    const subject = encodeURIComponent('JZI Project Consultation: ' + projectType);
+    const body = encodeURIComponent(`Name: ${fullName}\nCompany: ${companyName}\nEmail: ${email}\nPhone: ${contactNumber}\nProject: ${projectType}\nLocation: ${projectLocation}\nLot Area: ${lotArea}\nFloor Area: ${estimatedFloorArea}\nBudget: ${budgetRange}\nTimeline: ${targetTimeline}\nDescription: ${projectDescription}\n\nPlease attach drawings manually in your email application.`);
+    window.location.href = `mailto:jziarchitectural@gmail.com?subject=${subject}&body=${body}`;
   };
 
   const handleCopyCode = (code: string) => {
@@ -99,7 +102,7 @@ export const ConsultationSection: React.FC<ConsultationSectionProps> = ({
   return (
     <section id="consultation-section" className="py-20 bg-[#F8F6F1] border-t border-zinc-200">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div role="status" className="mb-6 rounded border border-amber-300 bg-amber-50 p-4 text-sm text-amber-950">Online submissions and status tracking are temporarily unavailable while secure backend integration is being completed. Please contact JZI at {CORPORATE_IDENTITY.contact.email} or {CORPORATE_IDENTITY.contact.phone}.</div>
+        <div role="status" className="mb-6 rounded border border-amber-300 bg-amber-50 p-4 text-sm text-amber-950">Online inquiry opens your email application; please send the prepared message and attach drawings manually. Automated status tracking is not available. Contact JZI at {CORPORATE_IDENTITY.contact.email} or {CORPORATE_IDENTITY.contact.phone}.</div>
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto space-y-3 mb-10">
           <div className="flex justify-center mb-1">
@@ -125,7 +128,7 @@ export const ConsultationSection: React.FC<ConsultationSectionProps> = ({
                   : 'text-zinc-600 hover:text-zinc-900'
               }`}
             >
-              Online Inquiry Unavailable
+              Email Project Inquiry
             </button>
             <button
               onClick={() => setActiveTab('lookup')}
@@ -442,7 +445,7 @@ export const ConsultationSection: React.FC<ConsultationSectionProps> = ({
 
                   <button
                     type="submit"
-                    disabled={true}
+                    disabled={false}
                     className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3 text-xs font-bold uppercase tracking-wider text-[#0B1933] bg-gradient-to-r from-[#DFB86C] via-[#C99A3D] to-[#DFB86C] hover:brightness-105 active:scale-95 disabled:opacity-50 transition-all rounded shadow-md"
                   >
                     {isSubmitting ? (
@@ -450,7 +453,7 @@ export const ConsultationSection: React.FC<ConsultationSectionProps> = ({
                     ) : (
                       <>
                         <Send className="w-3.5 h-3.5" />
-                        <span>Submit Project Inquiry</span>
+                        <span>Prepare Email Inquiry</span>
                       </>
                     )}
                   </button>
