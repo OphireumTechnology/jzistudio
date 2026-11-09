@@ -94,7 +94,7 @@ export const CORPORATE_IDENTITY = {
     "Professional services requiring licenses, registrations, or specific authorizations are provided by appropriately qualified and authorized practitioners.",
   contact: {
     address: "Unit 5k Seina Tower 1, Marikina, Philippines",
-    phone: "+63 977-829-2851 / +63 933-210-6739 / (02) 7341-7233",
+    phone: "+63 977 829 2851",
     email: "jziarchitectural@gmail.com",
     hours: "Contact for office hours",
     emergencySupport: "For project inquiries, use the official contact numbers."
