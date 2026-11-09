@@ -114,7 +114,7 @@ export const InfrastructureEnergyPage: React.FC<InfrastructureEnergyPageProps> =
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative rounded-xl overflow-hidden border border-zinc-200 shadow-xl bg-zinc-900">
           <img
-            src="/assets/images/project_infrastructure_solar_1794254055468.jpg"
+            src={`${import.meta.env.BASE_URL}assets/images/project_infrastructure_solar_1794254055468.jpg`}
             alt="Utility Solar Farm & Infrastructure"
             className="w-full h-72 sm:h-96 md:h-[420px] object-cover"
             referrerPolicy="no-referrer"
