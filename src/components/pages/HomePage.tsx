@@ -21,7 +21,7 @@ export const HomePage: React.FC<HomePageProps> = ({
   return (
     <div className="space-y-24 pb-20">
       {/* SECTION A: PREMIUM ARCHITECTURAL HERO */}
-      <section className="relative min-h-[90vh] flex items-center justify-center bg-[#0B1933] overflow-hidden pt-20">
+      <section className="relative min-h-[90vh] flex items-center justify-center bg-[#0B1933] overflow-hidden pt-24 sm:pt-28 md:pt-36 lg:pt-40">
         {/* Background Image with Contrast Scrim */}
         <div className="absolute inset-0 z-0">
           <img
@@ -37,7 +37,7 @@ export const HomePage: React.FC<HomePageProps> = ({
         </div>
 
         {/* Content Container */}
-        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8 py-16">
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8 py-10 sm:py-16">
           {/* Tagline Badge */}
           <div className="inline-flex max-w-full items-center justify-center gap-2 px-3 py-2 rounded border border-[#C99A3D]/40 bg-[#0B1933]/80 backdrop-blur-sm text-[10px] sm:text-xs font-semibold text-center leading-relaxed text-[#DFB86C] uppercase tracking-normal sm:tracking-widest animate-in fade-in slide-in-from-top-4 duration-700">
             <span className="hidden sm:block w-1.5 h-1.5 shrink-0 rounded-full bg-[#C99A3D]" />

@@ -91,7 +91,7 @@ export const InfrastructureEnergyPage: React.FC<InfrastructureEnergyPageProps> =
   ];
 
   return (
-    <div className="pt-24 pb-20 space-y-16">
+    <div className="pt-24 sm:pt-28 md:pt-36 pb-20 space-y-16">
       {/* Header */}
       <section className="bg-[#0B1933] text-white py-16 border-b border-[#C99A3D]/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4 text-center max-w-3xl">
