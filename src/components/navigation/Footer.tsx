@@ -122,11 +122,11 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenAdmin }) => {
               </li>
               <li className="flex items-center gap-2.5">
                 <Phone className="w-3.5 h-3.5 text-[#C99A3D] shrink-0" />
-                <span>{CORPORATE_IDENTITY.contact.phone}</span>
+                <a href="tel:+639778292851" className="hover:underline">{CORPORATE_IDENTITY.contact.phone}</a>
               </li>
               <li className="flex items-center gap-2.5">
                 <Mail className="w-3.5 h-3.5 text-[#C99A3D] shrink-0" />
-                <span>{CORPORATE_IDENTITY.contact.email}</span>
+                <a href="mailto:jziarchitectural@gmail.com" className="hover:underline">{CORPORATE_IDENTITY.contact.email}</a>
               </li>
               <li className="flex items-start gap-2.5">
                 <Clock className="w-3.5 h-3.5 text-[#C99A3D] shrink-0 mt-0.5" />
