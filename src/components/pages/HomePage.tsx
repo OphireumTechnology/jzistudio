@@ -75,7 +75,7 @@ export const HomePage: React.FC<HomePageProps> = ({
           <div className="pt-10 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto border-t border-white/10 text-left text-xs text-zinc-400">
             <div className="space-y-0.5">
               <span className="font-['Outfit'] text-xl sm:text-2xl font-bold text-white block">PCAB</span>
-              <span className="text-[11px] text-[#DFB86C]">Licensed Contractor</span>
+              <span className="text-[11px] text-[#DFB86C]">Credentials: verification pending</span>
             </div>
             <div className="space-y-0.5">
               <span className="font-['Outfit'] text-xl sm:text-2xl font-bold text-white block">Single-Source</span>
