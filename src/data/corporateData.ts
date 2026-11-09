@@ -99,7 +99,7 @@ export const CORPORATE_IDENTITY = {
     email: "jziarchitectural@gmail.com",
     emailLink: "mailto:jziarchitectural@gmail.com",
     hours: "Contact for office hours",
-    emergencySupport: "For project inquiries, use the official contact numbers."
+    emergencySupport: "For project inquiries, call the official phone number or email our team."
   }
 };
 
