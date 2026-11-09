@@ -50,9 +50,7 @@ export const ContactPage: React.FC = () => {
             <h4 className="font-['Outfit'] font-bold text-sm text-[#0B1933]">
               Telephone & Hotline
             </h4>
-            <p className="text-xs text-zinc-600 leading-relaxed">
-              {CORPORATE_IDENTITY.contact.phone}
-            </p>
+            <a className="text-xs text-zinc-600 leading-relaxed hover:underline" href="tel:+639778292851">{CORPORATE_IDENTITY.contact.phone}</a>
             <span className="text-[11px] text-zinc-400 block pt-1">
               Direct engineering desk
             </span>
@@ -65,9 +63,7 @@ export const ContactPage: React.FC = () => {
             <h4 className="font-['Outfit'] font-bold text-sm text-[#0B1933]">
               Email Correspondence
             </h4>
-            <p className="text-xs text-zinc-600 leading-relaxed">
-              {CORPORATE_IDENTITY.contact.email}
-            </p>
+            <a className="text-xs text-zinc-600 leading-relaxed hover:underline" href="mailto:jziarchitectural@gmail.com">{CORPORATE_IDENTITY.contact.email}</a>
             <span className="text-[11px] text-zinc-400 block pt-1">
               Typical response: 24 to 48 hours
             </span>
