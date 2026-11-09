@@ -84,6 +84,9 @@ export const ConsultationSection: React.FC<ConsultationSectionProps> = ({
     e.preventDefault();
     if (!validateForm()) return;
 
+    setErrors({ submit: 'Online inquiry submissions are temporarily unavailable. Please contact JZI directly using the official phone number or email shown on this page.' });
+    return;
+
     setIsSubmitting(true);
 
     // Generate formal inquiry reference number
@@ -187,6 +190,7 @@ export const ConsultationSection: React.FC<ConsultationSectionProps> = ({
   return (
     <section id="consultation-section" className="py-20 bg-[#F8F6F1] border-t border-zinc-200">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div role="status" className="mb-6 rounded border border-amber-300 bg-amber-50 p-4 text-sm text-amber-950">Online submissions and status tracking are temporarily unavailable while secure backend integration is being completed. Please contact JZI at {CORPORATE_IDENTITY.contact.email} or {CORPORATE_IDENTITY.contact.phone}.</div>
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto space-y-3 mb-10">
           <div className="flex justify-center mb-1">
