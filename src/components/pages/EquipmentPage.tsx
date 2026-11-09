@@ -54,7 +54,7 @@ export const EquipmentPage: React.FC<EquipmentPageProps> = ({ onOpenConsultation
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative rounded-xl overflow-hidden border border-zinc-200 shadow-xl bg-zinc-900">
           <img
-            src="/src/assets/images/equipment_fleet_excavators_1794254055633.jpg"
+            src="/assets/images/equipment_fleet_excavators_1794254055633.jpg"
             alt="JZI Heavy Construction Equipment Fleet"
             className="w-full h-64 sm:h-80 md:h-[380px] object-cover"
             referrerPolicy="no-referrer"
