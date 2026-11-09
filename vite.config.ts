@@ -6,7 +6,7 @@ import {defineConfig} from 'vite';
 export default defineConfig(() => {
   return {
     plugins: [react(), tailwindcss()],
-    base: process.env.GITHUB_PAGES === 'true' ? '/jzistudio/' : '/',
+    base: '/', // Custom domain jzistudio.com is hosted at the site root
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '.'),
