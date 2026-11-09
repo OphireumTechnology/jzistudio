@@ -30,6 +30,14 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenConsultation }) => {
         </div>
       </section>
 
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Professional team">
+        <div className="rounded-lg border border-[#C99A3D]/30 bg-[#F8F6F1] p-6 sm:p-8 text-center">
+          <p className="text-xs font-semibold uppercase tracking-widest text-[#C99A3D] mb-2">Professional Team</p>
+          <h2 className="font-['Outfit'] text-xl sm:text-2xl font-bold text-[#0B1933]">JOHN CHRISTOPHER L. MAAÑO, UAP</h2>
+          <p className="text-sm text-zinc-600 mt-1">Architect</p>
+        </div>
+      </section>
+
       {/* Overview & Background */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
